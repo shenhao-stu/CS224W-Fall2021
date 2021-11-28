@@ -1,5 +1,5 @@
 <div align=center>
-<img src="https://gitee.com/shenhao-stu/picgo/raw/master/Big-Data/logo.png" width="250">
+<img src="Stanford.png" width="250">
 </div>
 <p align="center">CS224W | shenhao0223@163.sufe.edu.cn | 上海财经大学 </p>
 
@@ -9,13 +9,9 @@
 
 教授：[Jure Leskovec](https://profiles.stanford.edu/jure-leskovec)
 
-评论贡献者：[Zhangzhi Peng](https://github.com/pengzhangzhi/)，[Zhang-Each](https://github.com/Zhang-Each)
-
-- [x] [bilibili](https://www.bilibili.com/video/BV1RZ4y1c7Co/?spm_id_from=333.788.recommend_more_video.0)
+- [x] [bilibili](https://www.bilibili.com/video/BV1RZ4y1c7Co/?spm_id_from=333.788.recommend_more_video.0)，[精翻](https://www.bilibili.com/video/BV1Qq4y1f7tt?p=1)
 - [x] [Lab x 5](http://web.stanford.edu/class/cs224w/projects.html)
 - [x] [Complete Notes & Slides](http://web.stanford.edu/class/cs224w/index.html#schedule)
-
-  
 
 ## 课程信息
 
@@ -47,13 +43,12 @@ leskovec绝对是图神经网络的大神，去查阅文献的时候就能发现
 
 市面上绝大多数介绍图卷积的资料都在提数学概念频谱，傅里叶变换之类的名词，作为一个计算机科班的学生对这些概念根本没有了解，根本听不懂再说啥。而从更深刻，直观的角度介绍了图卷积的原理和背后的直觉，因此深入浅出，浅显易懂，十分推荐。
 
-其次，课程作业也设计很好，贴合课程内容，加深对内容的学习，只需要一些深度学习pytorch编程的基础，就可以按照要求设计一个图神经网络。这门课的作业使用的是**[PyTorch Geometric (PyG)](https://github.com/rusty1s/pytorch_geometric)**。不得不说，这个工具的作者也是leskovec的学生~ 
-
-## 需要注意的坑点
-
-没啥坑的，就是大佬的口音不太正，不过配合字幕听懂完全无压力。
+其次，课程作业也设计很好，贴合课程内容，加深对内容的学习，只需要一些深度学习pytorch编程的基础，就可以按照要求设计一个图神经网络。这门课的作业使用的是[PyTorch Geometric (PyG)](https://github.com/rusty1s/pytorch_geometric)。不得不说，这个工具的作者也是leskovec的学生~ 
 
 ## 非官方资料推荐
 
-- 图神经网络入门资料：[序言：图神经网络入门（坑） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/370944518)
-- 参考内容：[CS224W笔记](https://github.com/Zhang-Each/Awesome-CS-Course-Learning-Notes/tree/master/cs224w-GraphML%26GNN)
+- [图神经网络（Graph Neural Networks，GNN）综述](https://zhuanlan.zhihu.com/p/75307407)
+- [edx Mooc](https://www.edx.org/course/advanced-algorithmics-and-graph-theory-with-python)：Advanced Algorithmics and Graph Theory with Python
+- 百度AI Studio 《[图神经网络7日打卡营](https://aistudio.baidu.com/aistudio/education/group/info/1956)》
+- [Paddle Graph Learning (PGL) ](https://github.com/PaddlePaddle/PGL)：基于 PaddlePaddle 的高效易用的图学习框架
+- maelfabien大佬的Github仓库：[Machine Learning Tutorials and Articles](https://github.com/maelfabien/Machine_Learning_Tutorials)
