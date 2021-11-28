@@ -55,5 +55,5 @@ leskovec绝对是图神经网络的大神，去查阅文献的时候就能发现
 
 ## 非官方资料推荐
 
-- 我自己写的图神经网络入门资料：[序言：图神经网络入门（坑） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/370944518)
-- [2021.7.22新增]我在学习CS224W时做的一些笔记，点击[这里](https://github.com/Zhang-Each/Awesome-CS-Course-Learning-Notes/tree/master/cs224w-GraphML%26GNN)，喜欢的话也可以点个⭐呀
+- 图神经网络入门资料：[序言：图神经网络入门（坑） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/370944518)
+- 参考内容：[CS224W笔记](https://github.com/Zhang-Each/Awesome-CS-Course-Learning-Notes/tree/master/cs224w-GraphML%26GNN)
