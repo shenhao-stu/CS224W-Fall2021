@@ -45,7 +45,7 @@
 
 其次，课程作业也设计很好，贴合课程内容，能够加深对内容的学习，只需要一些深度学习pytorch编程的基础，就可以按照要求设计一个图神经网络。这门课的作业使用的是[PyTorch Geometric (PyG)](https://github.com/rusty1s/pytorch_geometric)。  
 
-> PS:这个工具的作者也是leskovec的学生~ 
+> PS：这个工具的作者也是leskovec的学生~ 
 
 ## 非官方资料推荐
 
