@@ -37,6 +37,14 @@
 >
 > The recitation sessions in the first weeks of the class will give an overview of the expected background.
 
+## 食用方法
+
+:whale: 推荐使用 [**CS224W Github在线阅读**](https://shenhao-stu.github.io/CS224W-Fall2021/) 进行学习。
+
+CS224W Fall 2021的课程Slides，可以在项目`Slides`目录的下进行下载。
+
+配套作业和答案，可以在项目`Assigments`和`Codes`目录的下进行学习。
+
 ## Syllabus
 
 | 文件名                                                       | Lecture                                      |

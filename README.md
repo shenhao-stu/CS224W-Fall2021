@@ -1,5 +1,5 @@
 <div align=center>
-<img src="Assets/Stanford.png" width="250">
+<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Assets/Stanford.png" width="250">
 </div>
 <p align="center">CS224W | shenhao0223@163.sufe.edu.cn | 上海财经大学 </p>
 
@@ -36,6 +36,31 @@
 > - Familiarity with the basic linear algebra (any one of Math 51, Math 103, Math 113, or CS 205 would be much more than necessary)
 >
 > The recitation sessions in the first weeks of the class will give an overview of the expected background.
+
+## 食用方法
+
+:whale: 推荐使用 [**CS224W Github在线阅读**](https://shenhao-stu.github.io/CS224W-Fall2021/) 进行学习。
+
+CS224W Fall 2021的课程Slides，可以在项目`Slides`目录的下进行下载。
+
+配套作业和答案，可以在项目`Assigments`和`Codes`目录的下进行学习。
+
+## Syllabus
+
+| 文件名                                                       | Lecture                                      |
+| ------------------------------------------------------------ | -------------------------------------------- |
+| [CS224W 图机器学习01](https://shenhao-stu.github.io/CS224W-Fall2021/#/CS224W%20图机器学习01) | 导论，传统的图学习方法（Lecture1，Lecture2） |
+| [CS224W 图机器学习02](https://shenhao-stu.github.io/CS224W-Fall2021/#/CS224W%20图机器学习02) | 节点嵌入和PageRank（Lecture3，Leture4）      |
+| [CS224W 图机器学习03](https://shenhao-stu.github.io/CS224W-Fall2021/#/CS224W%20图机器学习03) | 消息传递机制                                 |
+| CS224W 图机器学习04                                          | 图神经网络基础                               |
+| CS224W 图机器学习05                                          | 图神经网络的训练和应用，表示能力分析         |
+| CS224W 图机器学习06                                          | 知识图谱，知识图谱推理                       |
+| CS224W 图机器学习07                                          | 频繁子图挖掘                                 |
+| CS224W 图机器学习08                                          | 社区检测                                     |
+| CS224W 图机器学习09                                          | 图生成模型                                   |
+| CS224W 图机器学习10                                          | 图神经网络前沿话题                           |
+
+
 
 ## 课程评价
 
