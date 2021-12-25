@@ -1,4 +1,4 @@
-# Chapter1 CS224W 图机器学习1
+# Chapter1  图机器学习导论
 
 - **斯坦福大学公开课CS224W的学习笔记**
 - **Learner** : shenhao
@@ -308,7 +308,7 @@ $$
 
 图kerbel的关键想法是**基于Bag-of-Word(BoW)**BoW原本是指使用单词出现的次数来作为文档的特征，而将其扩展到图上就可以将节点作为“单词”，即可以计算图中各种不同度数的节点的数量，并将结果作为一个多维的向量输出，向量的每一个维度d的值代表了图中度数为d的节点总数。
 
-<img src="https://gitee.com/shenhao-stu/picgo/raw/master/CS224W/image-20211128212121184.png" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.2.1.png" style="zoom: 33%;" />
 
 #### 1.1.2.2 Graphlet Kernel
 

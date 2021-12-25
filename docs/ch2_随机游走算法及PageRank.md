@@ -1,6 +1,6 @@
 
 
-# Chapter2 CS224W 图机器学习2
+# Chapter2 随机游走算法及PageRank
 
 - **斯坦福大学公开课CS224W的学习笔记**
 - **Learner** : shenhao

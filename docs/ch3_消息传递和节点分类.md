@@ -1,4 +1,4 @@
-# Chapter3 CS224W：图机器学习3
+# Chapter3 消息传递和节点分类
 
 - **斯坦福大学公开课CS224W的学习笔记**
 - **Learner** : shenhao

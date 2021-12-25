@@ -1,4 +1,4 @@
-# CS224W：图神经网络
+# Chapter4 GNN入门
 
 - **斯坦福大学公开课CS224W的学习笔记**
 - **Learner** : shenhao

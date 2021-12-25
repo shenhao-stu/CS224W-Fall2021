@@ -49,10 +49,10 @@ CS224W Fall 2021的课程Slides，可以在项目`Slides`目录的下进行下�
 
 | 文件名                                                       | Lecture                                      |
 | ------------------------------------------------------------ | -------------------------------------------- |
-| [CS224W 图机器学习01](https://shenhao-stu.github.io/CS224W-Fall2021/#/CS224W%20图机器学习01) | 导论，传统的图学习方法（Lecture1，Lecture2） |
-| [CS224W 图机器学习02](https://shenhao-stu.github.io/CS224W-Fall2021/#/CS224W%20图机器学习02) | 节点嵌入和PageRank（Lecture3，Leture4）      |
-| [CS224W 图机器学习03](https://shenhao-stu.github.io/CS224W-Fall2021/#/CS224W%20图机器学习03) | 消息传递机制                                 |
-| CS224W 图机器学习04                                          | 图神经网络基础                               |
+| [CS224W 图机器学习01](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch1_图机器学习导论) | 导论，传统的图学习方法（Lecture1，Lecture2） |
+| [CS224W 图机器学习02](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch2_随机游走算法及PageRank) | 节点嵌入和PageRank（Lecture3，Leture4）      |
+| [CS224W 图机器学习03](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch3_消息传递和节点分类) | 消息传递机制                                 |
+| [CS224W 图机器学习04](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch4_GNN入门) | 图神经网络基础                               |
 | CS224W 图机器学习05                                          | 图神经网络的训练和应用，表示能力分析         |
 | CS224W 图机器学习06                                          | 知识图谱，知识图谱推理                       |
 | CS224W 图机器学习07                                          | 频繁子图挖掘                                 |
@@ -79,3 +79,6 @@ CS224W Fall 2021的课程Slides，可以在项目`Slides`目录的下进行下�
 - 百度AI Studio 《[图神经网络7日打卡营](https://aistudio.baidu.com/aistudio/education/group/info/1956)》
 - [Paddle Graph Learning (PGL) ](https://github.com/PaddlePaddle/PGL)：基于 PaddlePaddle 的高效易用的图学习框架
 - maelfabien大佬的Github仓库：[Machine Learning Tutorials and Articles](https://github.com/maelfabien/Machine_Learning_Tutorials)
+- [李沐 | 零基础多图详解图神经网络（GNN/GCN）【论文精读】](https://www.bilibili.com/video/BV1iT4y1d7zP)
+- [Understanding Convolutions on Graphs](https://distill.pub/2021/understanding-gnns/)
+- [A Gentle Introduction to Graph Neural Networks](https://distill.pub/2021/gnn-intro/)
