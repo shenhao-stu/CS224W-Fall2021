@@ -178,7 +178,7 @@ $$
 - 其中A是图G的邻接矩阵，如果两个点uv相邻，那么$A_{uv}=1$否则就是0
 - 我们发现这时候由每个点的centrality组成的向量C实际上就是矩阵A的特征向量，其中最大的特征向量总是为正并且唯一的，因此可以用A矩阵的最大特征值作为图G的centrality
 
-**中间性中心度 Betweenness Centrality **
+**中间性中心度 Betweenness Centrality**
 
 该标准认为一个节点如果处于很多通往其他节点的最短路径上，那么这个节点就比较重要，因此定义：
 $$
@@ -189,7 +189,7 @@ $$
 
 <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.2_1.png" style="zoom: 33%;" />
 
-**邻近中心度 Closeness Centrality **
+**邻近中心度 Closeness Centrality**
 
 该标准认为一个节点如果拥有比较小的到其他所有节点的最短路径长度，那么它就比较重要。
 实质上就是，节点的位置越中心，通往其他节点的路径越短，节点越重要。用 $l$ 表示图中两个节点的最短路径长，那么：
