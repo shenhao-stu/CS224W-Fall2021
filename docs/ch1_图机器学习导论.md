@@ -10,7 +10,7 @@
 
 - 图结构和网络结构是非常常见的数据结构，常见的事件图、计算机网络、事务网、社交网络和人际关系网等等都是图状结构。
   
-  ![](https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.1_1.png)
+  ![](https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.1_1.png)
   
   - **无标度网络**经常被称为**自然图** Natural Graphs
   
@@ -28,7 +28,7 @@
 
   - 相比于图像和文本，图结构的大小比较随意且拓扑结构复杂（没有像网格那样的空间局部性）。
 
-    <img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.1_2.png" style="zoom:25%;" />
+    <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.1_2.png" style="zoom:25%;" />
 
   - 没有固定的节点顺序或者参考点。
 
@@ -36,7 +36,7 @@
 
 - 图学习的任务可以有 Node level ， Edge level ， Community(subgraph) level 和 Graph level 多个层次。
   
-  ![](https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.1_3.png)
+  ![](https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.1_3.png)
   
 - 传统的图机器学习任务有：
   - 节点分类：预测节点的属性，比如分类在线用户或者商品。
@@ -52,13 +52,13 @@
   - 边级别任务：推荐系统（典型的边预测）
   - 图级别任务：气味识别（典型的图分类）、发现“宇宙”
 
-  <img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.1_4.png" style="zoom:50%;" />
+  <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.1_4.png" style="zoom:50%;" />
 
 ### 1.0.2 图的表示方式
 
 #### 1.0.2.1 图的组成
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.2.1.png" style="zoom: 25%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.2.1.png" style="zoom: 25%;" />
 
 常见的表示方式使用节点集合N和边集合E构成一个图结构$G(N, E)$ 
 
@@ -66,7 +66,7 @@
 
 - 图可以分为**有向图**和**无向图**，区别就在于边是否具有方向性，节点的度（node degree）表示包含这个节点的边的数量，而在有向图中又可以具体分为出度和入度。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.2.2_1.png" style="zoom: 33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.2.2_1.png" style="zoom: 33%;" />
 
 - **二分图**是一种特殊的图结构，可以将图中的**节点**分成两个不相交的集合U和V，使得图中的任意一条边的两个顶点分别属于U和V
   - 作者和文章
@@ -80,20 +80,20 @@
   
 - **图的其他类型**：
     - **无权图 VS 加权图**
-        <img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.2.2_2.png" style="zoom:25%;" />
+        <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.2.2_2.png" style="zoom:25%;" />
         
     - **自循环、多边图**
-        <img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.2.2_3.png" style="zoom:25%;" />
+        <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.2.2_3.png" style="zoom:25%;" />
         
     - **同构图 VS 异构图**
     
         同构图中，节点的种类和连接关系都只有一种。比如：人际关系网络
     
-        <img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.2.2_4.png" style="zoom: 50%;" />
+        <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.2.2_4.png" style="zoom: 50%;" />
     
         异构图中，节点的种类和连接关系有多种类型。比如：学术网络
     
-        <img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.2.2_5.png" style="zoom:50%;" />
+        <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.2.2_5.png" style="zoom:50%;" />
     
         
     
@@ -104,11 +104,11 @@
 - 图可以用**邻接矩阵**来表示，其中无向图的邻接矩阵是一个对称矩阵，通常邻接矩阵都比较稀疏，网络结构通常都是比较稀疏的图。
 - 图可以用**边列表**表示，存储有边连接的每一对节点的 ID。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.2.3_1.png" style="zoom:25%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.2.3_1.png" style="zoom:25%;" />
 
 - 图可以用**邻接列表**来表示，这种表示方式只保留了有边的节点的情况，而舍去了稀疏的大部分内容，节约了存储空间。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.0.2.3_2.png" style="zoom: 25%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.0.2.3_2.png" style="zoom: 25%;" />
 
 
 
@@ -144,7 +144,7 @@ Learn a function: $f: V \rightarrow \mathbb{R}$
 
 ### 1.1.1 节点层面的机器学习任务
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.1.png" style="zoom: 50%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.png" style="zoom: 50%;" />
 
 - 图机器学习在节点层面的主要任务是对节点进行分类和学习图的结构特征，主要有：
   - 节点的度数
@@ -157,7 +157,7 @@ Learn a function: $f: V \rightarrow \mathbb{R}$
 节点 $v$ 的度数 $k_v$ 为节点所拥有的边（相邻节点）。
 但是节点度的这个特征**不做区分地对待每个相邻的节点**，因此在某种意义上，就没法对相同节点度的节点进行区分，即使它们可能位于网络中的不同部分。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.1.1.png" style="zoom:33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.1.png" style="zoom:33%;" />
 
 #### 1.1.1.2 node centrality
 
@@ -187,7 +187,7 @@ $$
 
 该标准下重要程度的计算方式就是对于图中的任意两个和 $v$ 不同的节点 $s$ ， $t $，计算其最短路径中包含 $v$ 的比例并进行求和。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.1.2_1.png" style="zoom: 33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.2_1.png" style="zoom: 33%;" />
 
 **邻近中心度 Closeness Centrality **
 
@@ -196,7 +196,7 @@ $$
 $$
 c_v=\frac 1 {\sum_{u\not=v}l_{uv}}
 $$
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.1.2_2.png" style="zoom: 33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.2_2.png" style="zoom: 33%;" />
 
 #### 1.1.1.3 聚类系数
 
@@ -207,7 +207,7 @@ $$
 
 > 聚类系数某种意义上也可以理解为记录了每个节点与其邻近节点构成的三角形的个数，即对于一个节点 $v$ ，如果它的两个邻居 $u$ 和 $w$ 之间有一条边，那么 $uvw $就构成了一个三角形，而这个三角形被统计到了聚类系数中去。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.1.3.png" style="zoom: 33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.3.png" style="zoom: 33%;" />
 
 - 0意味着你的朋友，与你相联系的朋友之间彼此互不了解；
 - 1意味着你所有朋友也是彼此的朋友；
@@ -220,7 +220,7 @@ $$
 >
 > **闭合三角形**：中心节点和两个邻近节点所形成的三元组图形。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.1.4_1.png" style="zoom:33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.4_1.png" style="zoom:33%;" />
 
 因此引出图元（Graphlets）这个概念所要描述的特征：**计算在给定节点的领域内预先指定的图的数量**。
 
@@ -228,11 +228,11 @@ Graphlets 是一种根连通的非同构子图，有如下几个衍生出的概�
 
 > G1 中有两个位置不同的节点1，2。G6 中有三个位置不同的节点9，10，11。G8 中所有的节点都是等价的。
 
-![](https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.1.4_2.png)
+![](https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.4_2.png)
 
 Graphlet Degree Vector(GDV)：一个给定的图元以该给定节点为根出现的次数。基于Graphlets的节点特征，记录了每个节点所能接触到的graphlets的个数，和度数以及聚类系数不同，度数衡量了一个节点能接触到的边的数量，而聚类系数衡量了一个节点能接触到的“三角形”的个数，而GDV记录了以一个节点v为root的所有的graphlet。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.1.4_3.png" style="zoom:33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.1.4_3.png" style="zoom:33%;" />
 
 考虑 2-5 个节点的图元，我们可以得到：
 
@@ -308,13 +308,13 @@ $$
 
 图kerbel的关键想法是**基于Bag-of-Word(BoW)**BoW原本是指使用单词出现的次数来作为文档的特征，而将其扩展到图上就可以将节点作为“单词”，即可以计算图中各种不同度数的节点的数量，并将结果作为一个多维的向量输出，向量的每一个维度d的值代表了图中度数为d的节点总数。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.2.1.png" style="zoom: 33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.2.1.png" style="zoom: 33%;" />
 
 #### 1.1.2.2 Graphlet Kernel
 
 Graphlet Kernel 可以计算图中不同的graphlet的个数来表示图的特征，但是这里的graphlet和节点层面的不太一样，不需要完全连接，也没有根的概念
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.2.2_1.png" style="zoom:33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.2.2_1.png" style="zoom:33%;" />
 
 - 对于一个给定的图 $G$，用一个graphlet表来定义graphlet计数向量$f_G\in\mathbb R^{n_k}$ ，$f$ 定义为我们预设图中出现的给定图元的实例数，则：
 
@@ -322,7 +322,7 @@ $$
 (f_G)_i=\#(g_i\subset G)
 $$
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.2.2_2.png" style="zoom:33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.2.2_2.png" style="zoom:33%;" />
 
 - graphlet kernel可以定义为：
 
@@ -359,15 +359,15 @@ $$
 
 **举例说明：给定两个图的颜色细化算法实例**
 
-![](https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.2.3_1.png)
+![](https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.2.3_1.png)
 
 经过 k 步迭代的颜色细化后，WL内核对给定颜色的节点数量进行计数。因此，在这个例子中，我们进行了三次迭代，所以我们有13种的不同颜色。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.2.3_2.png" style="zoom:50%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.2.3_2.png" style="zoom:50%;" />
 
 Weisfeiler-Lehman图核就是拿这两个特征描述向量的数量积作为两个图相似性的返回值。
 
-<img src="https://raw.githubusercontent.com/shenhao-stu/CS224W-Fall2021/master/Notes/doc_imgs/ch1/ch1.1.2.3_3.png" style="zoom:33%;" />
+<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch1/ch1.1.2.3_3.png" style="zoom:33%;" />
 
 **优势：**
 
