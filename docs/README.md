@@ -47,18 +47,18 @@ CS224W Fall 2021的课程Slides，可以在项目`Slides`目录的下进行下�
 
 ## Syllabus
 
-| 文件名                                                       | Lecture                                      |
-| ------------------------------------------------------------ | -------------------------------------------- |
-| [CS224W 图机器学习01](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch1_图机器学习导论) | 导论，传统的图学习方法（Lecture1，Lecture2） |
-| [CS224W 图机器学习02](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch2_随机游走算法及PageRank) | 节点嵌入和PageRank（Lecture3，Leture4）      |
-| [CS224W 图机器学习03](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch3_消息传递和节点分类) | 消息传递机制                                 |
-| [CS224W 图机器学习04](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch4_GNN入门) | 图神经网络基础                               |
-| CS224W 图机器学习05                                          | 图神经网络的训练和应用，表示能力分析         |
-| CS224W 图机器学习06                                          | 知识图谱，知识图谱推理                       |
-| CS224W 图机器学习07                                          | 频繁子图挖掘                                 |
-| CS224W 图机器学习08                                          | 社区检测                                     |
-| CS224W 图机器学习09                                          | 图生成模型                                   |
-| CS224W 图机器学习10                                          | 图神经网络前沿话题                           |
+| 文件名                                                       | Lecture                                          |
+| ------------------------------------------------------------ | ------------------------------------------------ |
+| [CS224W 图机器学习01](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch1_图机器学习导论) | 导论，传统的图学习方法（Lecture1，Lecture2）     |
+| [CS224W 图机器学习02](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch2_随机游走算法及PageRank) | 节点嵌入和PageRank（Lecture3，Leture4）          |
+| [CS224W 图机器学习03](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch3_消息传递和节点分类) | 消息传递机制（Lecture5）                         |
+| [CS224W 图机器学习04](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch4_GNN入门) | 图神经网络基础（Lecture6，Leture7）              |
+| [CS224W 图机器学习05](https://shenhao-stu.github.io/CS224W-Fall2021/#/ch5_GNN深入理解) | 图神经网络的训练和应用，表示能力分析（Lecture8） |
+| CS224W 图机器学习06                                          | 知识图谱，知识图谱推理                           |
+| CS224W 图机器学习07                                          | 频繁子图挖掘                                     |
+| CS224W 图机器学习08                                          | 社区检测                                         |
+| CS224W 图机器学习09                                          | 图生成模型                                       |
+| CS224W 图机器学习10                                          | 图神经网络前沿话题                               |
 
 
 
