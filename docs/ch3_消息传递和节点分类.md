@@ -32,7 +32,7 @@
   - 举例：一个在线社交网络，以人为节点，朋友关系为边，通过人们的兴趣将节点分为多类。
     从图中可以看出，各种颜色都分别聚在一起，亦即有相同兴趣的人们更有聚集在一起的倾向。
 
-  <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.0.1.png" style="zoom:50%;" />
+  <img src="doc_imgs/ch3/ch3.0.1.png" style="zoom:50%;" />
 
   
 
@@ -64,7 +64,7 @@
   - $Y_v=0$ 属于第二类
   - 一些没有标签的节点
 
-![](https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.0.2.png)
+![](doc_imgs/ch3/ch3.0.2.png)
 
 #### 3.0.2.1 基本的逻辑
 
@@ -100,17 +100,17 @@ $$
 
 ### 3.1.1 举例
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.1.1_1.png" style="zoom:33%;" />
+<img src="doc_imgs/ch3/ch3.1.1_1.png" style="zoom:33%;" />
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.1.1_2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch3/ch3.1.1_2.png" style="zoom:33%;" />
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.1.1_3.png" style="zoom:33%;" />
+<img src="doc_imgs/ch3/ch3.1.1_3.png" style="zoom:33%;" />
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.1.1_4.png" style="zoom:33%;" />
+<img src="doc_imgs/ch3/ch3.1.1_4.png" style="zoom:33%;" />
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.1.1_5.png" style="zoom:33%;" />
+<img src="doc_imgs/ch3/ch3.1.1_5.png" style="zoom:33%;" />
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.1.1_6.png" style="zoom:33%;" />
+<img src="doc_imgs/ch3/ch3.1.1_6.png" style="zoom:33%;" />
 
 在第四次迭代后，所有的分数都收敛稳定了。我们可以预测出：
 
@@ -175,7 +175,7 @@ $$
 
 1. 训练一个基于节点特征训练分类器（$\phi_1$）
 
-​		可以假设分类器以特征第一个元素作为分类标准，于是对中间节点分类错误。![](https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.2.3_1.png)
+​		可以假设分类器以特征第一个元素作为分类标准，于是对中间节点分类错误。![](doc_imgs/ch3/ch3.2.3_1.png)
 
 2. 根据 $\phi_{1}$ 得到的结果，计算 $z_{v}$ 
 
@@ -191,33 +191,33 @@ $$
 
    在这一步应用了网络结构信息。
 
-   <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.2.3_2.png" style="zoom:33%;" />
+   <img src="doc_imgs/ch3/ch3.2.3_2.png" style="zoom:33%;" />
 
 3. 具体流程
 
    - 第一步：在训练集上训练 $\phi_1$ 和 $\phi_2$
 
-     <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.2.3_3.png" style="zoom:33%;" />
+     <img src="doc_imgs/ch3/ch3.2.3_3.png" style="zoom:33%;" />
    
    - 第二步：在测试集上用 $\phi_1$ 预测标签
    
-     <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.2.3_4.png" style="zoom:33%;" />
+     <img src="doc_imgs/ch3/ch3.2.3_4.png" style="zoom:33%;" />
    
    - 第三步：循环迭代——更新相关特征 $z_v$
    
-     <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.2.3_5.png" style="zoom:33%;" />
+     <img src="doc_imgs/ch3/ch3.2.3_5.png" style="zoom:33%;" />
    
    - 第四步：循环迭代——使用 $\phi_2$ 更新标签 $Y_v$
    
-     <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.2.3_6.png" style="zoom:33%;" />
+     <img src="doc_imgs/ch3/ch3.2.3_6.png" style="zoom:33%;" />
    
    - 第五步：迭代直到收敛
    
-     <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.2.3_7.png" style="zoom:33%;" />
+     <img src="doc_imgs/ch3/ch3.2.3_7.png" style="zoom:33%;" />
    
    - 第六步：停止迭代
    
-     <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.2.3_8.png" style="zoom:33%;" />
+     <img src="doc_imgs/ch3/ch3.2.3_8.png" style="zoom:33%;" />
 
 ### 3.2.4 小结
 
@@ -244,11 +244,11 @@ $$
 - 基于节点顺序生成边方向，从而决定message passing的顺序
 - 按节点顺序，每次向下一个节点来传播当前统计到的节点个数，最后一个节点要发送出去的数据就是结果
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.3.1_1.png" style="zoom: 33%;" />
+<img src="doc_imgs/ch3/ch3.3.1_1.png" style="zoom: 33%;" />
 
 这样的算法也可以在树状的结构中进行，区别就是要从**叶节点将信息汇总到根节点** 
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.3.1_2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch3/ch3.3.1_2.png" style="zoom:33%;" />
 
 ### 3.3.2 循环消息传递算法
 
@@ -293,7 +293,7 @@ $$
 
 当有顺序的时候可以从任意一个节点开始，然后依次更新其邻居节点的信息；但是当图有环的时候，从不同的子图中获得的信息就不是独立的了。信息会在圈子里加强（就像PageRank里的spider trap）。这个时候信任传递依然可以使用，但是会出现循环传递的情况，可能会导致置信度不收敛的情况，但是由于现实世界的真实复杂图会更像树，就算有环也会有弱连接，所以还是能用信任传播机制。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch3/ch3.3.3.png" style="zoom:33%;" />
+<img src="doc_imgs/ch3/ch3.3.3.png" style="zoom:33%;" />
 
 
 

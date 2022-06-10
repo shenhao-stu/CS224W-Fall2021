@@ -19,7 +19,7 @@
 
 而图神经网络GNN提供了一种基于深度学习的节点嵌入方法。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.0.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.0.png" style="zoom:33%;" />
 
 **注意**：相比于图片和文本，网络结构要更复杂并且缺少规律性，而且往往是动态的。
 
@@ -34,7 +34,7 @@
 - 一种很naive的方法是**将图G的接邻矩阵和特征矩阵进行合并**，然后放到一个深度神经网络中进行学习，但是这样一来就会有$O(|V|)$数量级的参数，并且对于不同大小的图需要重新设计网络结构，这样的处理方式也使得结果对节点的顺序非常敏感。
 - 我们需要的是一个**==即使改变了节点顺序，结果也不会变==**的模型。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.1.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.1.1.png" style="zoom:33%;" />
 
 ### 4.1.2 图神经网络与CNN
 
@@ -48,7 +48,7 @@
 
 每个节点依据其周围邻居节点的信息生成一张**计算图**，通过前向传播和聚合函数进行信息的传递，最终计算出节点的嵌入。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.2.1_1.png" style="zoom: 50%;" />
+<img src="doc_imgs/ch4/ch4.1.2.1_1.png" style="zoom: 50%;" />
 
 这种神经网络可以是任意深度，每一层有节点的嵌入：
 
@@ -56,17 +56,17 @@
 - 第k层是节点**通过聚合k hop邻居所形成的节点嵌入**。
 - 每一层节点嵌入是聚合**上一层邻居节点的嵌入**再加上**它自己（相当于添加了自环）的嵌入**。 
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.2.1_2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.1.2.1_2.png" style="zoom:33%;" />
 
 #### 4.1.2.2 聚合函数
 
 上述结构只是一种最基本的框架，最主要的区别在于图中的**box**对应的内容，也就是**信息聚合的方式**和之后的一系列处理。不同聚合方法的区别就在于**如何跨层聚合邻居节点信息**。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.2.2_1.png" style="zoom: 33%;" />
+<img src="doc_imgs/ch4/ch4.1.2.2_1.png" style="zoom: 33%;" />
 
 常见的方法：对得到的信息**求平均**并放到神经网络中
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.2.2_2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.1.2.2_2.png" style="zoom:33%;" />
 $$
 \begin{equation}
 \begin{aligned}
@@ -89,7 +89,7 @@ $$
 **注意**：邻居信息聚合方法必须要**order invariant**或者说**permutation invariant**。
 permutation invariant：如下图所示，计算结果应当不受到节点符号顺序的影响。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.2.2_3.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.1.2.2_3.png" style="zoom:33%;" />
 
 在得到了嵌入向量之后可以**使用损失函数和随机梯度下降的方式来训练权重参数 $W$ 和 $B$ **
 
@@ -148,17 +148,17 @@ $$
 
 1. 定义一个邻居节点聚合的方式
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.4_1.png" style="zoom:25%;" />
+<img src="doc_imgs/ch4/ch4.1.4_1.png" style="zoom:25%;" />
 
 2. 定义一个基于嵌入向量的损失函数
 
 3. 使用一系列节点进行训练
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.4_2.png" style="zoom:25%;" />
+<img src="doc_imgs/ch4/ch4.1.4_2.png" style="zoom:25%;" />
 
 4. 生成节点的嵌入，用于实际的任务中
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.4_3.png" style="zoom:25%;" />
+<img src="doc_imgs/ch4/ch4.1.4_3.png" style="zoom:25%;" />
 
 ### 4.1.5 泛化能力
 
@@ -167,7 +167,7 @@ $$
 - 模型参数数量是亚线性sublinear于 $|V|$ 的（仅取决于嵌入维度和特征维度）
 - 矩阵尺寸就是下一层嵌入维度 × 上一层嵌入维度，第 0 层嵌入维度就是特征维度。
 
-![](https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.5.png)
+![](doc_imgs/ch4/ch4.1.5.png)
 
 #### 4.1.5.1 图中的泛化能力
 
@@ -175,13 +175,13 @@ $$
 
 例子：在模型生物体A的蛋白质相互作用图上进行训练，并在新收集的生物体B的数据上生成嵌入。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.5.1.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.1.5.1.png" style="zoom:33%;" />
 
 #### 4.1.5.2 新节点的泛化能力
 
 同时，图神经网络的泛化能力还可以用来生成新节点的节点嵌入向量
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.1.5.2.png" style="zoom: 33%;" />
+<img src="doc_imgs/ch4/ch4.1.5.2.png" style="zoom: 33%;" />
 
 ## 4.2 GNN概览
 
@@ -189,13 +189,13 @@ GNN由一系列GNN层线性组合构成，而GNN层包含了message和aggregatio
 
 在设计模型的过程中，可以选择的各种实现方式所组成的空间。比如说可以选择怎么卷积，怎么聚合，消息传递的机制，怎么将每一层网络叠起来，用什么激活函数、用什么损失函数，如何设计计算图，是否需要进行数据增强，图结构的其余操作等等。用这些选项组合出模型实例，构成的空间就是design space。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.2.png" style="zoom:33%;" />
 
 ### 4.2.1 GNN的单层结构
 
 GNN的单层结构将多个向量组合成一个单独的向量，需要经过两个步骤的处理，分别是message和aggregation，将输入的节点嵌入向量转化成输出的节点嵌入向量
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.1_1.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.2.1_1.png" style="zoom:33%;" />
 
 **message步骤**
 
@@ -219,7 +219,7 @@ $$
 h_v^{(l)}=\mathrm{CONCAT}(\mathrm {ACG}^{(l)}(m_u^{(l)},u\in N(v)), m_v^{(l)}) \\
 $$
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.1_2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.2.1_2.png" style="zoom:33%;" />
 
 #### 4.2.1.1 GCN
 
@@ -295,11 +295,11 @@ $$
 $$
 e_{vu}=a(W^{(l)}h_u^{(l-1)},W^{(l)}h_v^{(l-1)})
 $$
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/4.2.1.3_1.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/4.2.1.3_1.png" style="zoom:33%;" />
 
 这个 $a$ 随便选 (可以是不对称的)，比如用单层神经网络，则 $a$ 有可训练参数 (线性层中的权重)：
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/4.2.1.3_2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/4.2.1.3_2.png" style="zoom:33%;" />
 $$
 \begin{aligned}
 &e_{vu}=a\left(\mathbf{W}^{(l)} \mathbf{h}_{u}^{(l-1)}, \mathbf{W}^{(l)} \mathbf{h}_{v}^{(l-1)}\right) \\
@@ -319,7 +319,7 @@ $$
 \mathbf{h}_{v}^{(l)}=\sigma\left(\sum_{u \in N(v)} \alpha_{v u} \mathbf{W}^{(l)} \mathbf{h}_{u}^{(l-1)}\right)
 $$
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/4.2.1.3_3.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/4.2.1.3_3.png" style="zoom:33%;" />
 
 ##### 多头注意力机制
 
@@ -353,18 +353,18 @@ $$
 
 实践应用中的GNN网络层往往会应用传统神经网络模块，如在信息转换阶段应用Batch Normalization（使神经网络训练稳定）、Dropout（预防过拟合）、Attention / Gating（控制信息重要性）等。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.2_1.png" style="zoom: 33%;" />
+<img src="doc_imgs/ch4/ch4.2.2_1.png" style="zoom: 33%;" />
 
 - 批标准化：可以使得神经网络的训练更加稳定，做法就是求出每一层输出结果的平均值和方差，然后进行标准化处理，可以防止过大或者过小的数据出现而导致梯度消失或者梯度爆炸等问题
 
-  <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.2_2.png" style="zoom:33%;" />
+  <img src="doc_imgs/ch4/ch4.2.2_2.png" style="zoom:33%;" />
 
 - Dropout：用来避免神经网络过拟合，在训练的时候，以一定概率将一些神经元设置成0(即中途退出了计算)，在测试的时候使用所有的神经元参与到计算中。
   - 在GNN中一般在**线性层**使用dropout
 
 - 非线性函数 / 激活函数：使用一些非线性的激活函数，将特征非线性化，常见的非线性激活函数有sigmoid，ReLU等等
 
-  <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.2_3.png" style="zoom:33%;" />
+  <img src="doc_imgs/ch4/ch4.2.2_3.png" style="zoom:33%;" />
 
 ### 4.2.3 GNN的层级架构
 
@@ -386,13 +386,13 @@ $$
 
 - 可以用**感受野来解释过平滑问题**出现的原因
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.3.2_1.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.2.3.2_1.png" style="zoom:33%;" />
 
 - 随着GNN的层数增加，每个节点的感受野也在不断扩大，这就会导致两个节点的感受野的重合度越来越高，而感受野可以决定一个节点的嵌入向量，因此随着层数增加嵌入向量也会越来越相似，最终就会导致过平滑问题的出现。
   - 堆叠很多GNN网络层→节点具有高度重合的感受野→节点嵌入高度相似→过平滑问题
 
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.3.2_2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.2.3.2_2.png" style="zoom:33%;" />
 
 #### 4.2.3.3 解决过平滑问题
 
@@ -413,7 +413,7 @@ $$
 
   - 后处理层 post-processing layers：在节点嵌入的基础上进行推理和转换（如图分类、知识图谱等任务中）
 
-  <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.3.3_1.png" style="zoom:25%;" />
+  <img src="doc_imgs/ch4/ch4.2.3.3_1.png" style="zoom:25%;" />
   
     > colab2中的图分类任务就都有，用AtomEncoder作为pre-processing layer，池化层作为post-processing layer
 
@@ -422,7 +422,7 @@ $$
   - 有的时候位于更底层的GNN层产生的嵌入向量更能区分不同的节点，因此我们可以在最终节点嵌入中增加底层GNN层的影响力
   - 方法就是在GNN中添加一些捷径shortcuts，也叫做skip connection，来保存上一层节点的嵌入向量
 
-  <img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.3.3_2.png" style="zoom:33%;" />
+  <img src="doc_imgs/ch4/ch4.2.3.3_2.png" style="zoom:33%;" />
 
 
 #### 4.2.3.4 skip connections原理
@@ -433,18 +433,18 @@ $$
 
 这些路径都会对最终的节点嵌入产生影响，使得比较底层的一些计算结果直接跳过了中间一些层的计算直接作用到了更高的层次中，这样一来就相当于自动获得了一个浅GNN和深GNN的融合模型。
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.3.4_1.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.2.3.4_1.png" style="zoom:33%;" />
 
 因此，我们对GCN进行改进，引入有skip connection机制的模型，更新方式如下进行修改：
 
 $$
 h_v^{(l+1)}=\sigma (W_l\sum_{u\in N(v)}\frac{h_u^{(l)}}{|N(v)|})\rightarrow h_v^{(l+1)}=\sigma (W_l\sum_{u\in N(v)}\frac{h_u^{(l)}}{|N(v)|}+h_v^{(l)})
 $$
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.3.4_2.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.2.3.4_2.png" style="zoom:33%;" />
 
 **补充**：skip connections也可以跨多层，直接跨到最后一层，在最后一层聚合之前各层的嵌入（通过 concat / pooling / LSTM ）
 
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/docs/doc_imgs/ch4/ch4.2.3.4_3.png" style="zoom:33%;" />
+<img src="doc_imgs/ch4/ch4.2.3.4_3.png" style="zoom:33%;" />
 
 ## 4.3 本章小结
 
