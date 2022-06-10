@@ -1,5 +1,5 @@
 <div align=center>
-<img src="https://gitee.com/shenhao-stu/CS224W-Fall2021/raw/master/Assets/Stanford.png" width="250">
+<img src="../Assets/Stanford.png" width="250">
 </div>
 <p align="center">CS224W | shenhao0223@163.sufe.edu.cn | 上海财经大学 </p>
 
